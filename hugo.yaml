@@ -43,9 +43,6 @@ params:
   footer:
     displayCopyright: false
     displayPoweredBy: false
-  editURL:
-    enable: true
-    base: https://github.com/WilliamsStudentsOnline/wiki-v2/edit/main/content
   theme:
     default: light
     displayToggle: false
