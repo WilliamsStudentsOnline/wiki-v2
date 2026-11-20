@@ -1,0 +1,51 @@
+baseURL: https://wso-dev.williams.edu/wiki/
+title: WSO Developer Wiki
+locale: en-us
+enableGitInfo: true
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Docs
+      pageRef: /docs
+      weight: 1
+    - name: Blog
+      pageRef: /blog
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: Theme
+      weight: 4
+      params:
+        type: theme-toggle
+    - name: GitHub
+      weight: 5
+      url: https://github.com/WilliamsStudentsOnline
+      params:
+        icon: github
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  footer:
+    displayCopyright: false
+    displayPoweredBy: false
+  editURL:
+    enable: true
+    base: https://github.com/WilliamsStudentsOnline/wiki-v2/edit/main/content
+  theme:
+    default: light
+    displayToggle: false

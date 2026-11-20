@@ -1,0 +1,11 @@
+<style>
+{{- range slice (slice "normal" 400 "400") (slice "italic" 400 "400italic") (slice "normal" 600 "600") (slice "normal" 700 "700") }}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: {{ index . 0 }};
+  font-weight: {{ index . 1 }};
+  font-display: swap;
+  src: url("{{ printf "fonts/source-sans-pro-latin-%s.woff2" (index . 2) | relURL }}") format("woff2");
+}
+{{- end }}
+</style>

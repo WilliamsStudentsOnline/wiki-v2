@@ -1,0 +1,75 @@
+:root {
+  --primary-hue: 271deg;
+  --primary-saturation: 34%;
+  --primary-lightness: 43%;
+  --wso-nav-bg: #282e42;
+  --wso-text-on-nav: #fcfcfc;
+}
+
+html.dark {
+  --wso-nav-bg: #1a1e2c;
+}
+
+html,
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.hextra-nav-container-blur {
+  background-color: var(--wso-nav-bg) !important;
+}
+
+.hextra-nav-container nav,
+.hextra-nav-container nav a,
+.hextra-nav-container nav button {
+  color: var(--wso-text-on-nav);
+}
+
+.hextra-nav-container nav a:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.hextra-nav-container .hextra-search-trigger {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.hextra-nav-container kbd {
+  background-color: transparent;
+  color: var(--wso-text-on-nav);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.wso-home {
+  align-self: center;
+  width: 100%;
+  max-width: var(--hextra-max-content-width);
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.wso-home > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wso-home > h1 {
+  margin-bottom: 0.75rem;
+}
+
+.wso-home > p:last-of-type {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.content a:not(.not-prose),
+a[aria-label^="Read more"] {
+  color: #6f4993;
+}
+
+html.dark .content a:not(.not-prose),
+html.dark a[aria-label^="Read more"] {
+  color: #c4a0ef;
+}

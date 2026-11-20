@@ -1,0 +1,29 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+
+env:
+  HUGO_VERSION: '0.170.1'
+
+jobs:
+  deploy-dev:
+    name: Deploy to development
+    runs-on: [self-hosted, dev]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+          cache: false
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+      - name: Build site
+        run: hugo --minify
+      - name: Deploy site
+        run: rsync -a --delete public/ /var/www/wiki/
