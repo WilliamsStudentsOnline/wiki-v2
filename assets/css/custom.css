@@ -21,7 +21,7 @@ body {
 
 .hextra-nav-container nav,
 .hextra-nav-container nav a,
-.hextra-nav-container nav button {
+.hextra-nav-container nav button:not([role="menuitemradio"]) {
   color: var(--wso-text-on-nav);
 }
 
