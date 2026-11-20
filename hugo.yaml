@@ -26,12 +26,17 @@ menu:
       weight: 3
       params:
         type: search
-    - name: Theme
+    - name: RSS
       weight: 4
+      pageRef: /blog/index.xml
+      params:
+        icon: rss
+    - name: Theme
+      weight: 5
       params:
         type: theme-toggle
     - name: GitHub
-      weight: 5
+      weight: 6
       url: https://github.com/WilliamsStudentsOnline
       params:
         icon: github
